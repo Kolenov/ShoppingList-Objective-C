@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "EKVGoods.h"
+#import "EKVFoodProduct.h"
+#import "EKVBuildingProduct.h"
+#import "EKVHouseholdProduct.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    EKVGoods *productGeneric = [[EKVGoods alloc]init];
+    
+    NSLog(@"%f", productGeneric.productPrice);
+    
+    
     return YES;
 }
 

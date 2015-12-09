@@ -7,7 +7,6 @@
 //
 
 #import "EKVGoods.h"
-
 @interface EKVFoodProduct : EKVGoods
 
 //вес, дата производства, срок годности

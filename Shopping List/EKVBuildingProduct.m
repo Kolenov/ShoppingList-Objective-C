@@ -10,8 +10,31 @@
 
 @implementation EKVBuildingProduct
 
--(void) describe {
-    NSLog(@"");
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _productHeight = 0.0f;
+        _productWidth = 0.0f;
+    }
+    return self;
+}
+
+-(instancetype) initWithProductName:(NSString *)name andProductKind:(NSString *)kind{
+    self = [super initWithProductName:name andProductKind:kind];
+    if (self) {
+        _productHeight = 0.0f;
+        _productWidth = 0.0f;
+    }
+    return self;
+}
+
+-(NSString*) describe {
+    return [NSString stringWithFormat:
+            @"\n%@\nProduct Height: %f\nProduct Width: %f",
+            [super describe],
+            self.productHeight,
+            self.productWidth];
 }
 
 @end

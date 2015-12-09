@@ -17,6 +17,6 @@
 
 - (instancetype) initWithProductName:(NSString*)name andProductKind:(NSString*)kind;
 
-- (void) describe;
+- (NSString*) describe;
 
 @end

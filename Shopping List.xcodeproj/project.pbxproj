@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C16F3311C18EB9100DC2E4E /* NSDate+EKVDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C16F3301C18EB9100DC2E4E /* NSDate+EKVDateTools.m */; };
 		6C5717E61C1790B200DA2C6F /* EKVFoodProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5717E51C1790B200DA2C6F /* EKVFoodProduct.m */; };
 		6C5717E91C1790E500DA2C6F /* EKVGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5717E81C1790E500DA2C6F /* EKVGoods.m */; };
 		6C5717EC1C17912400DA2C6F /* EKVBuildingProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5717EB1C17912400DA2C6F /* EKVBuildingProduct.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C16F32F1C18EB9100DC2E4E /* NSDate+EKVDateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+EKVDateTools.h"; path = "Shopping List/NSDate+EKVDateTools.h"; sourceTree = "<group>"; };
+		6C16F3301C18EB9100DC2E4E /* NSDate+EKVDateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+EKVDateTools.m"; path = "Shopping List/NSDate+EKVDateTools.m"; sourceTree = "<group>"; };
 		6C5717E41C1790B200DA2C6F /* EKVFoodProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKVFoodProduct.h; path = "Shopping List/EKVFoodProduct.h"; sourceTree = "<group>"; };
 		6C5717E51C1790B200DA2C6F /* EKVFoodProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EKVFoodProduct.m; path = "Shopping List/EKVFoodProduct.m"; sourceTree = "<group>"; };
 		6C5717E71C1790E500DA2C6F /* EKVGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKVGoods.h; path = "Shopping List/EKVGoods.h"; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		6CB483D31C17852F00244C6E = {
 			isa = PBXGroup;
 			children = (
+				6C16F32F1C18EB9100DC2E4E /* NSDate+EKVDateTools.h */,
+				6C16F3301C18EB9100DC2E4E /* NSDate+EKVDateTools.m */,
 				6C5717E71C1790E500DA2C6F /* EKVGoods.h */,
 				6C5717E81C1790E500DA2C6F /* EKVGoods.m */,
 				6C5717E41C1790B200DA2C6F /* EKVFoodProduct.h */,
@@ -177,6 +182,7 @@
 				6CB483E41C17852F00244C6E /* AppDelegate.m in Sources */,
 				6C5717E91C1790E500DA2C6F /* EKVGoods.m in Sources */,
 				6CB483E11C17852F00244C6E /* main.m in Sources */,
+				6C16F3311C18EB9100DC2E4E /* NSDate+EKVDateTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

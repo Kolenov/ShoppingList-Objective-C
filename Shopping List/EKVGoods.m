@@ -29,9 +29,12 @@
     return self;
 }
 
-
-- (void) describe{
-    
+- (NSString*) describe{
+    return [NSString stringWithFormat:
+            @"\nProduct Name: %@\nProduct Kind: %@\nProduct Price: %f",
+            self.productName,
+            self.productKind,
+            self.productPrice];
 }
 
 @end

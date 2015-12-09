@@ -10,8 +10,24 @@
 
 @implementation EKVHouseholdProduct
 
--(void) describe {
-    NSLog(@"");
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _productDesignation = @"Default";
+        _productDateManufacture = [NSDate date];
+        _productDateExpiration = [NSDate date];
+    }
+    return self;
+}
+
+-(NSString*) describe {
+    return [NSString stringWithFormat:
+            @"\n%@\nProduct Designation: %@\nDate Manufacture: %@\nDate Expiration: %@",
+            [super describe],
+            self.productDesignation,
+            self.productDateManufacture,
+            self.productDateExpiration];
 }
 
 @end

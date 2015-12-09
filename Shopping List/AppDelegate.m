@@ -11,6 +11,7 @@
 #import "EKVFoodProduct.h"
 #import "EKVBuildingProduct.h"
 #import "EKVHouseholdProduct.h"
+#import "NSDate+EKVDateTools.h"
 
 @interface AppDelegate ()
 
@@ -22,12 +23,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    EKVHouseholdProduct *productGeneric = [EKVHouseholdProduct new];
     
-    EKVGoods *productGeneric = [[EKVGoods alloc]init];
+    NSLog(@"%@",[productGeneric describe]);
     
-    NSLog(@"%f", productGeneric.productPrice);
-    
-    
+    productGeneric.productDateManufacture = [[NSDate alloc] setDateFromString:@"20.10.2000"];
+    NSLog(@"%@",[productGeneric describe]);
+
     return YES;
 }
 

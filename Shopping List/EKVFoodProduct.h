@@ -10,7 +10,7 @@
 @interface EKVFoodProduct : EKVGoods
 
 //вес, дата производства, срок годности
-@property (nonatomic, assign) CGFloat   productWeight;
+@property (nonatomic, assign) CGFloat  productWeight;
 @property (nonatomic, strong) NSDate    *productDateManufacture;
 @property (nonatomic, strong) NSDate    *productDateExpiration;
 

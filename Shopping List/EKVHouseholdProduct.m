@@ -23,7 +23,7 @@
 
 -(NSString*) describe {
     return [NSString stringWithFormat:
-            @"\n%@\nProduct Designation: %@\nDate Manufacture: %@\nDate Expiration: %@",
+            @"%@\nProduct Designation: %@\nDate Manufacture: %@\nDate Expiration: %@\n\n",
             [super describe],
             self.productDesignation,
             self.productDateManufacture,

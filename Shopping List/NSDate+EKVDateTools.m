@@ -10,22 +10,31 @@
 
 @implementation NSDate (EKVDateTools)
 
-- (NSDate *) setDateYear:(NSUInteger)year andMonth:(NSUInteger)month andDay:(NSUInteger)day{
-    NSDateComponents *components = [NSDateComponents new];
-    components.year = year;
-    components.month = month;
-    components.day = day;
-    components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    return [calendar dateFromComponents:components];
+
+- (instancetype) initWithDateYear:(NSUInteger)year andMonth:(NSUInteger)month andDay:(NSUInteger)day{
+    self = [self init];
+    if (self) {
+        NSDateComponents *components = [NSDateComponents new];
+        components.year = year;
+        components.month = month;
+        components.day = day;
+        components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        self = [calendar dateFromComponents:components];
+    }
+    return self;
 }
 
-- (NSDate *) setDateFromString:(NSString *)dateString{
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    dateFormatter.locale = [NSLocale currentLocale];
-    dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    dateFormatter.dateFormat = @"dd.MM.yyyy";
-    return [dateFormatter dateFromString:dateString];
+- (instancetype) initDateWithString:(NSString *)dateString{
+    self = [self init];
+    if (self) {
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
+        dateFormatter.locale = [NSLocale currentLocale];
+        dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+        dateFormatter.dateFormat = @"dd.MM.yyyy";
+        self =  [dateFormatter dateFromString:dateString];
+    }
+    return self;
 }
 
 @end

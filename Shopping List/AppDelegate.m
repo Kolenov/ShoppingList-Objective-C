@@ -23,13 +23,49 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    EKVHouseholdProduct *productGeneric = [EKVHouseholdProduct new];
+    EKVGoods *productGeneric = [EKVGoods new];
     
-    NSLog(@"%@",[productGeneric describe]);
+    EKVFoodProduct *banana = [[EKVFoodProduct alloc] initWithProductName:@"Banana" andProductKind:@"Fruits"];
+    banana.productPrice = 15.30;
+    banana.productWeight = 150.65;
+    banana.productDateManufacture = [[NSDate alloc] initDateWithString:@"20.10.2015"];
+    banana.productDateExpiration = [[NSDate alloc] initWithDateYear:2015 andMonth:11 andDay:20];
     
-    productGeneric.productDateManufacture = [[NSDate alloc] setDateFromString:@"20.10.2000"];
-    NSLog(@"%@",[productGeneric describe]);
-
+    
+    EKVFoodProduct *salmon = [[EKVFoodProduct alloc] initWithProductName:@"Salmon" andProductKind:@"Fish"];
+    salmon.productPrice = 150.82;
+    salmon.productWeight = 12.165;
+    salmon.productDateManufacture = [[NSDate alloc] initWithDateYear:2015 andMonth:12 andDay:10];
+    salmon.productDateExpiration = [[NSDate alloc] initWithDateYear:2015 andMonth:12 andDay:11];
+    
+    EKVBuildingProduct *window = [[EKVBuildingProduct alloc] initWithProductName:@"Small Window" andProductKind:@"Plastic Window"];
+    window.productHeight = 150.5;
+    window.productWidth = 150.0;
+    window.productPrice = 300.05;
+    
+    EKVBuildingProduct *door = [[EKVBuildingProduct alloc] initWithProductName:@"Double door" andProductKind:@"Outer door"];
+    door.productPrice = 450.26;
+    door.productHeight = 2000.0;
+    door.productWidth = 900.0;
+    
+    EKVHouseholdProduct *shampoo = [[EKVHouseholdProduct alloc] initWithProductName:@"Persian shampoo" andProductKind:@"Сleanser"];
+    shampoo.productDesignation = @"For bathroom";
+    shampoo.productPrice = 9.33;
+    shampoo.productDateManufacture = [[NSDate alloc] initDateWithString:@"07.06.2014"];
+    shampoo.productDateExpiration = [[NSDate alloc] initDateWithString:@"07.06.2016"];
+    
+    NSMutableArray* goodsList = [[NSMutableArray alloc] initWithObjects:banana, salmon, nil];
+    [goodsList addObject:window];
+    [goodsList addObject:door];
+    [goodsList addObject:shampoo];
+    [goodsList addObject:productGeneric];
+    
+    
+    for (EKVGoods *product in goodsList) {
+        NSLog(@"%@",[product describe]);
+    }
+    
+    
     return YES;
 }
 

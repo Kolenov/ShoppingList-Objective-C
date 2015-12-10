@@ -24,14 +24,14 @@
     if (self) {
         _productName = name;
         _productKind = kind;
-        _productPrice = 0.00f;
+        _productPrice = 0;
     }
     return self;
 }
 
 - (NSString*) describe{
     return [NSString stringWithFormat:
-            @"\nProduct Name: %@\nProduct Kind: %@\nProduct Price: %f",
+            @"\n\nProduct Name: %@\nProduct Kind: %@\nProduct Price: %f",
             self.productName,
             self.productKind,
             self.productPrice];

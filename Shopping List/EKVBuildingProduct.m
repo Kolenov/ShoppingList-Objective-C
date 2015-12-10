@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-        _productHeight = 0.0f;
-        _productWidth = 0.0f;
+        _productHeight = 0.;
+        _productWidth = 0;
     }
     return self;
 }
@@ -23,15 +23,15 @@
 -(instancetype) initWithProductName:(NSString *)name andProductKind:(NSString *)kind{
     self = [super initWithProductName:name andProductKind:kind];
     if (self) {
-        _productHeight = 0.0f;
-        _productWidth = 0.0f;
+        _productHeight = 0;
+        _productWidth = 0;
     }
     return self;
 }
 
 -(NSString*) describe {
     return [NSString stringWithFormat:
-            @"\n%@\nProduct Height: %f\nProduct Width: %f",
+            @"%@\nProduct Height: %f\nProduct Width: %f\n\n",
             [super describe],
             self.productHeight,
             self.productWidth];

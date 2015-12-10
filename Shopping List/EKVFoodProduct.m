@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _productWeight = 0.0f;
+        _productWeight = 0;
         _productDateManufacture = [NSDate date];
         _productDateExpiration = [NSDate date];
     }
@@ -24,7 +24,7 @@
 -(instancetype) initWithProductName:(NSString *)name andProductKind:(NSString *)kind{
     self = [super initWithProductName:name andProductKind:kind];
     if (self) {
-        _productWeight = 0.0f;
+        _productWeight = 0;
         _productDateManufacture = [NSDate date];
         _productDateExpiration = [NSDate date];
     }
@@ -33,7 +33,7 @@
 
 -(NSString*) describe {
     return [NSString stringWithFormat:
-            @"\n%@\nProduct Weight: %f\nDate Manufacture: %@\nDate Expiration: %@",
+            @"%@\nProduct Weight: %f\nDate Manufacture: %@\nDate Expiration: %@\n\n",
             [super describe],
             self.productWeight,
             self.productDateManufacture,

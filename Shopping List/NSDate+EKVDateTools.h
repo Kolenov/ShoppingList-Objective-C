@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (EKVDateTools)
-- (NSDate *) setDateFromString:(NSString *)birthDayString;
-- (NSDate *) setDateYear:(NSUInteger)year andMonth:(NSUInteger)month andDay:(NSUInteger)day;
+- (instancetype) initDateWithString:(NSString *)birthDayString;
+- (instancetype) initWithDateYear:(NSUInteger)year andMonth:(NSUInteger)month andDay:(NSUInteger)day;
 @end
